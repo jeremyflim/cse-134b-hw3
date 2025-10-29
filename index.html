@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeremy Lim | Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="My personal portfolio homepage.">
+  <link rel="icon" href="favicon.ico">
+
+  <style>
+    cool-card {
+      display: block;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 2px solid #1f1c1cff;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    cool-card h3 { margin: 0 0 4px 0; font-size: 16px; }
+    cool-card p { margin: 0; font-size: 15px; }
+  </style>
+
+  <script>
+    class HelloWorld extends HTMLElement {
+      connectedCallback() {
+        console.log('Hello world!');
+      }
+    }
+    customElements.define('hello-world', HelloWorld);
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40"
+        stroke="black" stroke-width="4" fill="orange" />
+      </svg>
+    </a>
+    <nav aria-label="Navigation Menu">
+      <ul>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-label="Intro">
+      <h1>Hi, my name is <strong>Jeremy</strong>.</h1>
+      <p><em>Computer Science @ UC San Diego</em></p>
+
+      <picture>
+        <!-- These pictures don't exist yet but you get the point. Same with the other non existing stuff. Mhm. -->
+        <source media="(width >= 600px)" srcset="headshot-large.jpg" type="image/jpeg">
+        <img src="headshot-small.jpg" alt="My headshot photo">
+      </picture>
+
+      <p>
+        Intro text paragraph here. I'm a third-year <b>Computer Science</b> student at <span>UC San Diego</span> looking for experiences in software engineering.
+      <br>I'm eager to work on exciting projects and work with you to create impact!
+    </section>
+
+    <section aria-label="Key skills">
+      <h2>Key skills</h2>
+      <cool-card>
+        <h3>Featured skill</h3>
+        <img src="skill-a.png" alt="Skill icon 1" width="24" height="24">
+      </cool-card>
+      <cool-card>
+        <h3>Featured skill</h3>
+        <img src="skill-b.png" alt="Skill icon 2" width="24" height="24">
+      </cool-card>
+      <cool-card>
+        <h3>Featured skill</h3>
+        <img src="skill-c.png" alt="Skill icon 3" width="24" height="24">
+      </cool-card>
+    </section>
+
+    <section aria-label="Featured Projects">
+      <h2>Featured Projects</h2>
+      <ol>
+        <li><a href="projects.html#project-a">Project A</a></li>
+        <li><a href="projects.html#project-b">Project B</a></li>
+        <li><a href="projects.html#project-c">Project C</a></li>
+      </ol>
+      <button type="button">See my other projects!</button>
+    </section>
+
+    <section aria-label="Contact call to action">
+      <h2>Interested?</h2>
+      <button type="button">Contact Me!</button>
+    </section>
+
+    <!-- omg javascript!!!! -->
+    <hello-world></hello-world>
+  </main>
+
+  <footer>
+    <nav aria-label="Footer links">
+      <ul>
+        <li><a href="mailto:jel125@ucsd.edu">email</a></li>
+        <li><a href="https://linkedin.com/in/jeremyflim" title="LinkedIn">linkedin</a></li>
+        <li><a href="https://github.com/jeremyflim" title="GitHub">github</a></li>
+        <li><a href="experiments.html">experiments</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <noscript>
+    <p>Javascript disabled. Now we can't say hello to the world. You are evil.</p>
+  </noscript>
+</body>
+</html>
