@@ -1,88 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Jeremy Lim | Projects</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="description" content="My personal portfolio projects page.">
-  <link rel="icon" href="favicon.ico">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Jeremy Lim | Projects</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="My personal portfolio homepage.">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
 
-<body>
-  <header>
-    <a href="index.html">
-      <svg width="100" height="100">
-        <circle cx="50" cy="50" r="40"
-        stroke="black" stroke-width="4" fill="orange" />
-      </svg>
-    </a>
-    <nav aria-label="Navigation Menu">
-      <ul>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header> 
+  <body data-page="projects">
+    <header class="site-header">
+      <a class="brand" href="index.html">Jeremy Lim</a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-hidden="true">
+      <label class="nav-toggle-button" for="nav-toggle" aria-label="Toggle navigation" role="button" tabindex="0" aria-controls="primary-nav">
+        <span></span>
+      </label>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list" id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <h1>Personal Projects</h1>
+    <main>
+      <h1>Personal Projects</h1>
 
-    <section aria-label="List of Projects">
+      <section id="projects-layout" aria-label="Projects layout">
+        <search id="project-search-pane" aria-label="Search">
+          <h2>Search projects from the list:</h2>
+          <form id="project-search-form" action="#" method="get">
+            <input id="project-search-field" name="q" type="search" placeholder="Search Projects">
+            <ul id="project-search-actions" aria-label="Search actions">
+              <li><button type="submit" class="cta">Submit</button></li>
+              <li><button type="reset" class="cta" aria-label="Clear">Clear</button></li>
+            </ul>
+          </form>
+        </search>
 
-      <article id="project-a">
-        <h3>Title A</h3>
-        <p>Short summary for Project A.</p>
-        <p><a href="#project-a-details">details</a></p>
-      </article>
+        <section id="project-listing" aria-label="List of projects">
+          <ul>
+            <li class="project-row">
+              <figure class="project-thumb">
+                <img src="assets/libraryapp.png" alt="University Library App thumbnail">
+              </figure>
+              <article class="project-meta">
+                <h3>University Library App</h3>
+                <p class="proj-desc">Simple full-stack university library app.</p>
+                <nav class="project-actions" aria-label="Links for the university library app">
+                  <a class="cta" href="#">Website</a>
+                  <a class="cta" href="https://github.com/jeremyflim/university-library">GitHub</a>
+                </nav>
+              </article>
+            </li>
 
-      <article id="project-b">
-        <h3>Title B</h3>
-        <p>Short summary for Project B.</p>
-        <p><a href="#project-b-details">details</a></p>
-      </article>
+            <li class="project-row">
+              <figure class="project-thumb">
+                <img src="assets/computer-filler.png" alt="Task manager thumbnail">
+              </figure>
+              <article class="project-meta">
+                <h3>Simple Task Manager</h3>
+                <p class="proj-desc">Basic CRUD task manager application.</p>
+                <nav class="project-actions" aria-label="Links for the task manager app">
+                  <a class="cta" href="#">Website</a>
+                  <a class="cta" href="https://github.com/jeremyflim/task-app-minimal">GitHub</a>
+                </nav>
+              </article>
+            </li>
 
-      <article id="project-c">
-        <h3>Title C</h3>
-        <p>Short summary for Project C.</p>
-        <p><a href="#project-c-details">details</a></p>
-      </article>
-    </section>
+            <li class="project-row">
+              <figure class="project-thumb">
+                <img src="assets/computer-filler.png" alt="Placeholder thumbnail">
+              </figure>
+              <article class="project-meta">
+                <h3>Placeholder</h3>
+                <p class="proj-desc">Still not sure what to put here.</p>
+                <nav class="project-actions" aria-label="Placeholder project links">
+                  <a class="cta" href="#">Website</a>
+                  <a class="cta" href="#">GitHub</a>
+                </nav>
+              </article>
+            </li>
 
-    <!-- None of these actually work :(-->
-    <dialog id="project-a-details" aria-label="Project A">
-      <h2>Project A — Details</h2>
-      <p>Longer description of project A.</p>
-      <p><a href="projects.html">Close</a></p>
-    </dialog>
+            <li class="project-row">
+              <figure class="project-thumb">
+                <img src="assets/computer-filler.png" alt="Broken link project thumbnail">
+              </figure>
+              <article class="project-meta">
+                <h3>Broken Link Showcase</h3>
+                <p class="proj-desc">This sample is only here to sample the 404 page.</p>
+                <nav class="project-actions" aria-label="Sample project links">
+                  <a class="cta" href="/404.html">Website</a>
+                  <a class="cta" href="https://github.com/ihadtofindausernamethatdoesntexist" target="_blank" rel="noopener">GitHub Repository</a>
+                </nav>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
 
-    <dialog id="project-b-details" aria-label="Project B">
-      <h2>Project B — Details</h2>
-      <p>Longer description of project B.</p>
-      <p><a href="projects.html">Close</a></p>
-    </dialog>
-
-    <dialog id="project-c-details" aria-label="Project C">
-      <h2>Project C — Details</h2>
-      <p>Longer description of project C.</p>
-      <p><a href="projects.html">Close</a></p>
-    </dialog>
-
-  </main>
-
-  <footer>
-    <nav aria-label="Footer links">
-      <ul>
-        <li><a href="mailto:jel125@ucsd.edu">email</a></li>
-        <li><a href="https://linkedin.com/in/jeremyflim" title="LinkedIn">linkedin</a></li>
-        <li><a href="https://github.com/jeremyflim" title="GitHub">github</a></li>
-        <li><a href="experiments.html">experiments</a></li>
-      </ul>
-    </nav>
-  </footer>
-
-  <noscript>
-    <p>Okay there's just no Javascript on this page. Unlike the homepage.</p>
-  </noscript>
-</body>
+    <noscript>
+      <p>Javascript disabled. There's still no JS for now though so it's fine.</p>
+    </noscript>
+  </body>
 </html>

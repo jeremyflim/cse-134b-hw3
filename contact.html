@@ -1,82 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Jeremy Lim | Contact</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="description" content="My personal portfolio contact page.">
-  <link rel="icon" href="favicon.ico">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Jeremy Lim | Contact</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="My personal portfolio contact page.">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
 
-<body>
-  <header>
-    <a href="index.html">
-      <svg width="100" height="100">
-        <circle cx="50" cy="50" r="40"
-        stroke="black" stroke-width="4" fill="orange" />
-      </svg>
-    </a>
-    <nav aria-label="Navigation Menu">
-      <ul>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <body data-page="contact">
+    <header class="site-header">
+      <a class="brand" href="index.html">Jeremy Lim</a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-hidden="true">
+      <label class="nav-toggle-button" for="nav-toggle" aria-label="Toggle navigation" role="button" tabindex="0" aria-controls="primary-nav">
+        <span></span>
+      </label>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list" id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <h1>Get in Touch!</h1>
+    <main>
+      <h1>Get in Touch</h1>
 
-    <section aria-label="Contact Form">
-      <h2>Contact form</h2>
+      <section id="contact-options" aria-label="Contact options">
+        <article class="contact-card" id="contact-intro">
+          <h2>Reach out!</h2>
+          <p>Whether you're an employer looking to hire, a peer who wants to connect, a friend doing something silly, or everything in between, feel free to reach out through any of these! Though I know you are a grader. For now.</p>
+          <address>
+            <p><strong>Email: </strong> jeremylim158@gmail.com</p>
+            <p><strong>Phone:</strong> (858) 789-3993</p>
+          </address>
+          <p class="contact-divider" role="separator">or</p>
+          <nav id="contact-social" aria-label="Social profiles">
+            <a class="cta" data-network="linkedin" href="https://linkedin.com/in/jeremyflim" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="cta" data-network="github" href="https://github.com/jeremyflim" target="_blank" rel="noopener">GitHub</a>
+          </nav>
+          <p class="contact-divider" role="separator">Are you an employer?</p>
+          <a class="cta" data-network="resume" href="assets/resume.pdf" download="Jeremy_Lim_Resume">Download my Resume here!</a>
+        </article>
 
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Send a message</legend>
+        <article class="contact-card" id="contact-form-card">
+          <h2>Or Contact Me Here!</h2>
+          <form action="#" method="post">
+            <fieldset>
+              <legend>Chat with me!</legend>
 
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required maxlength="100">
+              <label for="name">Name
+                <input id="name" name="name" type="text" required maxlength="100" autocomplete="name" placeholder="What's your name?">
+              </label>
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required maxlength="50">
+              <label for="email">Email
+                <input id="email" name="email" type="email" required maxlength="50" autocomplete="email" placeholder="now.your.email@example.com">
+              </label>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required maxlength="2000"></textarea>
-
-          <div>
-            <button type="submit">Send</button>
-            <progress value="0" max="100">0%</progress>
-          </div>
-
-        </fieldset>
-      </form>
-    </section>
-
-    <section aria-label="Alternative Contact Methods">
-      <h2>Or:</h2>
-      <ul>
-        <li><a href="mailto:jel125@ucsd.edu">Email</a></li>
-        <li><a href="https://linkedin.com/in/jeremyflim">LinkedIn</a></li>
-        <li><a>Phone Number Here</a></li>
-      </ul>
-    </section>
-
-  </main>
-
-  <footer>
-    <nav aria-label="Footer links">
-      <ul>
-        <li><a href="mailto:jel125@ucsd.edu">email</a></li>
-        <li><a href="https://linkedin.com/in/jeremyflim" title="LinkedIn">linkedin</a></li>
-        <li><a href="https://github.com/jeremyflim" title="GitHub">github</a></li>
-        <li><a href="experiments.html">experiments</a></li>
-      </ul>
-    </nav>
-  </footer>
-
-  <noscript>
-    <p>JavaScript disabled. But again. No javascript. Even though the form needs it.</p>
-  </noscript>
-</body>
+              <label for="message">Message
+                <textarea id="message" name="message" required maxlength="2000" placeholder="What do you want to tell me?"></textarea>
+              </label>
+              <button type="submit" class="cta">Send</button> 
+            </fieldset>
+          </form>
+        </article>
+      </section>
+    </main>
+    <noscript>
+      <p>Javascript disabled. There's still no JS for now though so it's fine.</p>
+    </noscript>
+  </body>
 </html>

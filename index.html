@@ -1,118 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Jeremy Lim | Home</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="description" content="My personal portfolio homepage.">
-  <link rel="icon" href="favicon.ico">
+  <head>
+    <meta charset="UTF-8">
+    <title>Jeremy Lim | Home</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="My personal portfolio homepage.">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
 
-  <style>
-    cool-card {
-      display: block;
-      padding: 0.75rem;
-      margin: 0.5rem 0;
-      border: 2px solid #1f1c1cff;
-      border-radius: 8px;
-      background: #fff;
-    }
+  <body data-page="home">
+    <header class="site-header">
+      <a class="brand" href="index.html">Jeremy Lim</a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-hidden="true">
+      <label class="nav-toggle-button" for="nav-toggle" aria-label="Toggle navigation" role="button" tabindex="0" aria-controls="primary-nav">
+        <span></span>
+      </label>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list" id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    cool-card h3 { margin: 0 0 4px 0; font-size: 16px; }
-    cool-card p { margin: 0; font-size: 15px; }
-  </style>
+    <main>
+      <section id="headshot-section" aria-label="Intro">
+        <picture id="headshot-visual">
+          <source media="(min-width: 50rem)" srcset="assets/headshot-larger.jpg" type="image/jpeg">
+          <img src="assets/headshot-smaller.jpg" alt="My headshot">
+        </picture>
 
-  <script>
-    class HelloWorld extends HTMLElement {
-      connectedCallback() {
-        console.log('Hello world!');
-      }
-    }
-    customElements.define('hello-world', HelloWorld);
-  </script>
+        <section id="headshot-copy">
+          <h1>Hi, my name is <strong>Jeremy</strong>.</h1>
+          <p>Computer Science Junior @ UC San Diego</p>
 
-</head>
+          <p class="lead">
+            I'm a third-year <strong>Computer Science</strong> student at <em>UC San Diego</em> always looking to learn and seeking practical experiences in computer science.
+          </p>
+        </section>
+      </section>
 
-<body>
-  <header>
-    <a href="index.html">
-      <svg width="100" height="100">
-        <circle cx="50" cy="50" r="40"
-        stroke="black" stroke-width="4" fill="orange" />
-      </svg>
-    </a>
-    <nav aria-label="Navigation Menu">
-      <ul>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+      <section class="skills" aria-label="Key skills">
+        <h2>Key skills</h2>
+        <ul id="skill-grid">
+          <li>
+            <figure>
+              <img src="assets/nextjs.png" alt="Programming icon">
+              <figcaption>Next.js</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="assets/react.png" alt="Web Development icon">
+              <figcaption>React</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="assets/typescript.png" alt="Systems icon">
+              <figcaption>TypeScript</figcaption>
+            </figure>
+          </li>
+          <li>
+            <!-- computer-filler.png from wikimedia commons. view source: https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Blue_computer_icon.svg/2048px-Blue_computer_icon.svg.png-->
+            <figure>
+              <img src="assets/computer-filler.png" alt="Product Design icon">
+              <figcaption>Placeholder 1</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="assets/computer-filler.png" alt="Teamwork icon">
+              <figcaption>Placeholder 2</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="assets/computer-filler.png" alt="Leadership icon">
+              <figcaption>Placeholder 3</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
 
-  <main>
-    <section aria-label="Intro">
-      <h1>Hi, my name is <strong>Jeremy</strong>.</h1>
-      <p><em>Computer Science @ UC San Diego</em></p>
+      <section id="featured-section" aria-label="Featured Projects">
+        <h2>Featured Projects</h2>
 
-      <picture>
-        <!-- These pictures don't exist yet but you get the point. Same with the other non existing stuff. Mhm. -->
-        <source media="(width >= 600px)" srcset="headshot-large.jpg" type="image/jpeg">
-        <img src="headshot-small.jpg" alt="My headshot photo">
-      </picture>
+        <section class="carousel" aria-roledescription="carousel">
+          <input type="radio" name="carousel" id="c1" class="carousel-input" checked>
+          <input type="radio" name="carousel" id="c2" class="carousel-input">
+          <input type="radio" name="carousel" id="c3" class="carousel-input">
+          <label class="arrow for-c1 left" for="c3" aria-hidden="true">‹</label>
+          <label class="arrow for-c1 right" for="c2" aria-hidden="true">›</label>
+          <label class="arrow for-c2 left" for="c1" aria-hidden="true">‹</label>
+          <label class="arrow for-c2 right" for="c3" aria-hidden="true">›</label>
+          <label class="arrow for-c3 left" for="c2" aria-hidden="true">‹</label>
+          <label class="arrow for-c3 right" for="c1" aria-hidden="true">›</label>
 
-      <p>
-        Intro text paragraph here. I'm a third-year <b>Computer Science</b> student at <span>UC San Diego</span> looking for experiences in software engineering.
-      <br>I'm eager to work on exciting projects and work with you to create impact!
-    </section>
+          <section class="carousel-viewport">
+            <ol class="carousel-track">
+              <li class="slide" id="proj-1">
+                <article class="project-card">
+                  <h3>University Library App</h3>
+                  <picture>
+                    <source srcset="assets/libraryapp.png" type="image/svg+xml">
+                    <img src="assets/computer-filler.png" alt="University library thumbnail">
+                  </picture>
+                  <p class="proj-desc">Simple full-stack university library app.</p>
+                  <p class="card-controls">
+                    <a class="cta" href="" aria-label="View more">View more</a>
+                  </p>
+                </article>
+              </li>
 
-    <section aria-label="Key skills">
-      <h2>Key skills</h2>
-      <cool-card>
-        <h3>Featured skill</h3>
-        <img src="skill-a.png" alt="Skill icon 1" width="24" height="24">
-      </cool-card>
-      <cool-card>
-        <h3>Featured skill</h3>
-        <img src="skill-b.png" alt="Skill icon 2" width="24" height="24">
-      </cool-card>
-      <cool-card>
-        <h3>Featured skill</h3>
-        <img src="skill-c.png" alt="Skill icon 3" width="24" height="24">
-      </cool-card>
-    </section>
+              <li class="slide" id="proj-2">
+                <article class="project-card">
+                  <h3>Simple Task Manager</h3>
+                  <picture>
+                    <source srcset="assets/computer-filler.png" type="image/svg+xml">
+                    <img src="assets/computer-filler.png" alt="Task app manager thumbnail">
+                  </picture>
+                  <p class="proj-desc">Basic CRUD task manager application.</p>
+                  <p class="card-controls">
+                    <a class="cta" href="#" aria-label="View more">View more</a>
+                  </p>
+                </article>
+              </li>
 
-    <section aria-label="Featured Projects">
-      <h2>Featured Projects</h2>
-      <ol>
-        <li><a href="projects.html#project-a">Project A</a></li>
-        <li><a href="projects.html#project-b">Project B</a></li>
-        <li><a href="projects.html#project-c">Project C</a></li>
-      </ol>
-      <button type="button">See my other projects!</button>
-    </section>
+              <li class="slide" id="proj-3">
+                <article class="project-card">
+                  <h3>Placeholder Project</h3>
+                  <picture>
+                    <source srcset="assets/computer-filler.png" type="image/svg+xml">
+                    <img src="assets/computer-filler.png" alt="Placeholder thumbnail">
+                  </picture>
+                  <p class="proj-desc">I'm not sure what to put here.</p>
+                  <p class="card-controls">
+                    <a class="cta" href="#" aria-label="View more">View more</a>
+                  </p>
+                </article>
+              </li>
+            </ol>
+          </section>
+        </section>
 
-    <section aria-label="Contact call to action">
-      <h2>Interested?</h2>
-      <button type="button">Contact Me!</button>
-    </section>
+        <p><a class="cta" href="projects.html">See all projects</a></p>
+      </section>
 
-    <!-- omg javascript!!!! -->
-    <hello-world></hello-world>
-  </main>
-
-  <footer>
-    <nav aria-label="Footer links">
-      <ul>
-        <li><a href="mailto:jel125@ucsd.edu">email</a></li>
-        <li><a href="https://linkedin.com/in/jeremyflim" title="LinkedIn">linkedin</a></li>
-        <li><a href="https://github.com/jeremyflim" title="GitHub">github</a></li>
-        <li><a href="experiments.html">experiments</a></li>
-      </ul>
-    </nav>
-  </footer>
-
-  <noscript>
-    <p>Javascript disabled. Now we can't say hello to the world. You are evil.</p>
-  </noscript>
-</body>
+      <section id="contact-cta" aria-label="Contact call to action">
+        <h2>Chat with me!</h2>
+        <p><a class="cta" href="contact.html">Contact Here!</a></p>
+      </section>
+    </main>
+    <noscript>
+      <p>Javascript disabled. There's still no JS for now though so it's fine.</p>
+    </noscript>
+  </body>
 </html>
